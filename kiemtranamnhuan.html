@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Nhập năm</label>
+    <input id="nam" type="text" placeholder="VD:1997">
+    <label for="">Nhập tháng</label>
+    <input id="thang" type="text" placeholder="Từ tháng 1 đến tháng 12">
+    <button onclick="KiemTraNamNhuan()">Kiểm tra năm nhuận</button>
+    <button onclick="xem()"> Xem số ngày của tháng</button>
+    <p id="NamNhuan"></p>
+    <p id="SoThang"></p>
+    <script>
+        function KiemTraNamNhuan(){
+            let yrs = Number(document.getElementById('nam').value);
+            // let KiemTra = document.getElementById('NamNhuan').value;
+            if ((yrs %4 === 0 && yrs %100 !==0 && yrs % 400 !== 0)||(yrs%100===0 && yrs % 400 ==0)){
+                document.getElementById('NamNhuan').innerHTML = yrs + "là năm nhuận!"
+            }else{
+                document.getElementById('NamNhuan').innerHTML = yrs + "không phải là năm nhuận!"
+            }
+        }
+    </script>
+</body>
+
+</html>
