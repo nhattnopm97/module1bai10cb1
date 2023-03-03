@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mời bạn chơi trò chơi đăng nhập</title>
+</head>
+
+<body>
+        <label for="">Tên Đăng Nhập</label>
+        <input id="User" type="text" placeholder="PhanManhNhat">
+        <label for="">Mật khẩu</label>
+        <input id="Pass" type="password" placeholder="******">
+        <button onclick="DangNhap()">Đăng Nhập</button>
+        <p id="in"></p>
+    <script>
+        function DangNhap(){
+            let x = document.getElementById('User').value;
+            let y = document.getElementById('Pass').value;
+            if(x === "Admin" && y === "TheMaster"){
+                document.getElementById('in').innerHTML = "Welcome"
+            }else{
+                document.getElementById('in').innerHTML = "I don't know you!"
+            }
+        }
+    </script>
+</body>
+
+</html>
